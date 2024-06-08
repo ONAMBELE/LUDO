@@ -1,0 +1,71 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1717;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #a5a3a3;
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    gap: 2px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-color: #000;
+    font-size: 18px;
+    text-align: center;
+}
+
+.cell:active{
+    border :1px solid blue;
+    background-color :rgb(1, 1, 156);
+    
+}
+
+.cell.error{
+    border :1px solid rgb(255, 17, 0);
+    background-color :rgb(124, 0, 0);
+    
+}
+
+
+.cell:nth-child(3n) {
+    border-right: 2px solid #000;
+}
+
+.cell:nth-child(27n + 1), .cell:nth-child(27n + 2), .cell:nth-child(27n + 3) {
+    border-bottom: 2px solid #000;
+}
+
+.cell:nth-child(9n + 1), .cell:nth-child(9n + 2), .cell:nth-child(9n + 3) {
+    border-right: 2px solid #000;
+}
+
+#solveButton {
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 15px;
+    border:0;
+    outline:0;
+    background-color: #33e477be;
+
+}
